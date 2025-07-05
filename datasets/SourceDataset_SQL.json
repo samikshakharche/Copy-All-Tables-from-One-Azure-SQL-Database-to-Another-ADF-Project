@@ -1,0 +1,23 @@
+{
+    "name": "SourceDataset_SQL",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "sourceDB",
+            "type": "LinkedServiceReference"
+        },
+        "parameters": {
+            "TableName": {
+                "type": "string"
+            }
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [],
+        "typeProperties": {
+            "table": {
+                "value": "@dataset().TableName\n",
+                "type": "Expression"
+            }
+        }
+    }
+}

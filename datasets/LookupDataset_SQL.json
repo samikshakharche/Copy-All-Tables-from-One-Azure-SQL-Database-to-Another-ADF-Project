@@ -1,0 +1,30 @@
+{
+    "name": "LookupDataset_SQL",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "sourceDB",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "CustomerID",
+                "type": "int",
+                "precision": 10
+            },
+            {
+                "name": "Name",
+                "type": "nvarchar"
+            },
+            {
+                "name": "Email",
+                "type": "nvarchar"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "Customer"
+        }
+    }
+}

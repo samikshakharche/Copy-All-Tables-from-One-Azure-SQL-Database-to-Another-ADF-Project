@@ -1,0 +1,23 @@
+{
+    "name": "SinkDataset_SQL",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "DestinationDB",
+            "type": "LinkedServiceReference"
+        },
+        "parameters": {
+            "TableName": {
+                "type": "string"
+            }
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [],
+        "typeProperties": {
+            "table": {
+                "value": "@dataset().TableName",
+                "type": "Expression"
+            }
+        }
+    }
+}
